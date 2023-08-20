@@ -11,7 +11,7 @@ app.use(cors());
 app.use('/', router);
 
 
-app.listen(process.env.SERVER_PORT, () => {
+app.listen(process.env.SERVER_PORT || 8000, () => {
     console.log(`Server is listening on port ${process.env.SERVER_PORT}`);
     ConfigureDb();
 });
